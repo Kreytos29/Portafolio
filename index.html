@@ -15,6 +15,7 @@
     --muted: #9b9aac;
     --toast: #ff2d78;
     --nexo: #e0303f;
+    --cross: #ff4d5a;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -64,10 +65,11 @@
 
   <header class="top">
     <h1>Proyectos</h1>
-    <p>Software libre hecho por <strong>Kreytos29</strong>: un reproductor de música para Android y Linux, y una herramienta para controlar el celular desde la PC.</p>
+    <p>Software libre hecho por <strong>Kreytos29</strong>: un reproductor de música para Android y Linux, y una herramienta para controlar el celular desde la PC y una mira para juegos en Linux.</p>
     <nav>
       <a class="btn" href="#toastune">Toastune</a>
       <a class="btn" href="#nexohub">NexoHub</a>
+      <a class="btn" href="#crosshair">Crosshair</a>
       <a class="btn" href="https://github.com/Kreytos29">GitHub</a>
     </nav>
   </header>
@@ -119,6 +121,29 @@
     </figure>
     <div class="actions">
       <a class="btn primary" href="https://github.com/Kreytos29/NexoHub">Ver código en GitHub</a>
+    </div>
+  </section>
+
+  <section class="project" id="crosshair" style="--accent: var(--cross)">
+    <h2>Crosshair</h2>
+    <p class="tag">Mira para juegos en Linux (Wayland)</p>
+    <ul class="chips">
+      <li>Python</li><li>PyQt6</li><li>GTK4</li><li>layer-shell</li><li>Hyprland</li><li>MIT</li>
+    </ul>
+    <p class="desc">Una mira que se dibuja encima de todas las ventanas, deja pasar los clics y se controla desde un icono en la bandeja del sistema.</p>
+    <ul class="features">
+      <li>Seis estilos: cruz, cruz en T, aspa, punto, círculo e imagen propia.</li>
+      <li>Contorno con color y grosor, para verla sobre cualquier fondo.</li>
+      <li>Perfiles guardados que se pueden exportar y compartir.</li>
+      <li>Atajos de teclado, elección de monitor y centro ajustable.</li>
+      <li>Instalador y desinstalador incluidos, y paquete para Arch.</li>
+    </ul>
+    <figure class="hero">
+      <img src="img/crosshair.png" alt="Ventana de ajustes de Crosshair" loading="lazy" style="max-width: 640px">
+      <figcaption>Ventana de ajustes de Crosshair.</figcaption>
+    </figure>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/Kreytos29/Toast-Crosshair-Linux-">Ver código en GitHub</a>
     </div>
   </section>
 
