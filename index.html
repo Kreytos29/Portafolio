@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kerytos29 · Proyectos</title>
+<meta name="description" content="Portafolio de proyectos de kerytos29: Toastune (reproductor de música) y NexoHub (control de scrcpy).">
+<link rel="icon" href="img/nexohub.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #0d0d12;
+    --surface: #16161e;
+    --border: #2a2a36;
+    --text: #ecebf2;
+    --muted: #9b9aac;
+    --toast: #ff2d78;
+    --nexo: #e0303f;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+  header.top { padding: 72px 0 40px; }
+  header.top h1 { margin: 0 0 8px; font-size: clamp(2rem, 6vw, 3rem); letter-spacing: -0.02em; }
+  header.top p { margin: 0; color: var(--muted); max-width: 56ch; }
+  nav { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn {
+    display: inline-block; padding: 9px 16px; border-radius: 999px;
+    border: 1px solid var(--border); background: var(--surface);
+    text-decoration: none; font-weight: 600; font-size: .95rem;
+  }
+  .btn:hover { border-color: var(--muted); }
+  .btn.primary { background: var(--accent, var(--toast)); border-color: transparent; color: #fff; }
+
+  section.project { padding: 56px 0; border-top: 1px solid var(--border); }
+  .project h2 { margin: 0 0 4px; font-size: 1.8rem; }
+  .tag { color: var(--muted); margin: 0 0 20px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; padding: 0; list-style: none; }
+  .chips li { font-size: .8rem; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+  .desc { max-width: 68ch; }
+  .features { padding-left: 20px; max-width: 68ch; }
+  .features li { margin: 4px 0; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+
+  figure { margin: 0; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid var(--border); }
+  figcaption { margin-top: 6px; font-size: .85rem; color: var(--muted); }
+  .hero { margin: 28px 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+
+  footer { padding: 40px 0 64px; border-top: 1px solid var(--border); color: var(--muted); font-size: .9rem; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>Proyectos</h1>
+    <p>Software libre hecho por <strong>kerytos29</strong>: un reproductor de música para Android y Linux, y una herramienta para controlar el celular desde la PC.</p>
+    <nav>
+      <a class="btn" href="#toastune">Toastune</a>
+      <a class="btn" href="#nexohub">NexoHub</a>
+      <a class="btn" href="https://github.com/kerytos29">GitHub</a>
+    </nav>
+  </header>
+
+  <section class="project" id="toastune" style="--accent: var(--toast)">
+    <h2>Toastune 🐾</h2>
+    <p class="tag">Reproductor de música libre para Android y Linux</p>
+    <ul class="chips">
+      <li>Kotlin</li><li>Jetpack Compose</li><li>Compose Desktop</li><li>Media3</li><li>mpv</li><li>GPL-3.0</li>
+    </ul>
+    <p class="desc">Busca y reproduce desde YouTube Music, sin anuncios ni rastreo. Nombrado por Tostada, una gatita muy querida.</p>
+    <ul class="features">
+      <li>Búsqueda, cola editable, aleatorio y temporizador de sueño.</li>
+      <li>Letras sincronizadas, favoritos, historial y listas.</li>
+      <li>Descargas y caché sin conexión.</li>
+      <li>En Linux: integración con el escritorio (MPRIS, bandeja), mezcla entre canciones y reproducción sin pausas.</li>
+    </ul>
+    <figure class="hero">
+      <img src="img/demo.gif" alt="Demostración de Toastune en Linux" loading="lazy">
+      <figcaption>Toastune en Linux.</figcaption>
+    </figure>
+    <div class="grid">
+      <figure><img src="img/02-artista.png" alt="Página de un artista" loading="lazy"><figcaption>Página de un artista</figcaption></figure>
+      <figure><img src="img/03-letras.png" alt="Pantalla de reproducción con letras" loading="lazy"><figcaption>Letras sincronizadas</figcaption></figure>
+      <figure><img src="img/04-inicio.png" alt="Pantalla de inicio" loading="lazy"><figcaption>Inicio</figcaption></figure>
+      <figure><img src="img/05-ajustes.png" alt="Ajustes y ecualizador" loading="lazy"><figcaption>Ajustes y ecualizador</figcaption></figure>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/kerytos29/Toastune">Ver código en GitHub</a>
+    </div>
+  </section>
+
+  <section class="project" id="nexohub" style="--accent: var(--nexo)">
+    <h2>NexoHub</h2>
+    <p class="tag">Control de streaming de celular con scrcpy</p>
+    <ul class="chips">
+      <li>Python</li><li>PyQt6</li><li>scrcpy</li><li>ADB</li><li>MIT</li>
+    </ul>
+    <p class="desc">Detecta tu celular Android, tu conexión USB, tu monitor y tu CPU, y arma automáticamente el comando <code>scrcpy</code> óptimo para tu equipo. Se usa con una interfaz gráfica o desde la terminal.</p>
+    <ul class="features">
+      <li>Detección automática del celular, del USB real y del monitor.</li>
+      <li>Perfiles de uso (Competitivo, Streaming, Calidad) y perfiles propios.</li>
+      <li>Mapeo de teclado y mouse a toques, como en los emuladores, con editor visual.</li>
+      <li>Grabación, capturas, conexión por WiFi y verificación de dependencias.</li>
+    </ul>
+    <figure class="hero">
+      <img src="img/nexohub.png" alt="Interfaz de NexoHub" loading="lazy">
+      <figcaption>Interfaz de NexoHub.</figcaption>
+    </figure>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/kerytos29/NexoHub">Ver código en GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 kerytos29 · <a href="https://github.com/kerytos29">github.com/kerytos29</a></p>
+  </footer>
+</div>
+</body>
+</html>
